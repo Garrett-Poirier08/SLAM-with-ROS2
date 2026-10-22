@@ -1,0 +1,18 @@
+[0.407s] Invoking command in '/ros2_ws/build/my_sensor_pkg': PYTHONPATH=/ros2_ws/build/my_sensor_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ros2_ws/install/my_sensor_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /ros2_ws/build/my_sensor_pkg/build --no-deps symlink_data
+[0.501s] running develop
+[0.547s] running egg_info
+[0.551s] writing my_sensor_pkg.egg-info/PKG-INFO
+[0.551s] writing dependency_links to my_sensor_pkg.egg-info/dependency_links.txt
+[0.551s] writing entry points to my_sensor_pkg.egg-info/entry_points.txt
+[0.552s] writing requirements to my_sensor_pkg.egg-info/requires.txt
+[0.552s] writing top-level names to my_sensor_pkg.egg-info/top_level.txt
+[0.562s] reading manifest file 'my_sensor_pkg.egg-info/SOURCES.txt'
+[0.563s] writing manifest file 'my_sensor_pkg.egg-info/SOURCES.txt'
+[0.567s] running build_ext
+[0.568s] Creating /ros2_ws/install/my_sensor_pkg/lib/python3.12/site-packages/my-sensor-pkg.egg-link (link to .)
+[0.569s] Installing wave_publisher script to /ros2_ws/install/my_sensor_pkg/lib/my_sensor_pkg
+[0.570s] Installing wheel_imu_odom script to /ros2_ws/install/my_sensor_pkg/lib/my_sensor_pkg
+[0.570s] 
+[0.570s] Installed /ros2_ws/build/my_sensor_pkg
+[0.570s] running symlink_data
+[0.585s] Invoked command in '/ros2_ws/build/my_sensor_pkg' returned '0': PYTHONPATH=/ros2_ws/build/my_sensor_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ros2_ws/install/my_sensor_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /ros2_ws/build/my_sensor_pkg/build --no-deps symlink_data

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: my-sensor-pkg
+Version: 0.0.0
+Summary: Custom SLAM car nodes
+Maintainer: root
+Maintainer-email: root@todo.todo
+License: Apache-2.0

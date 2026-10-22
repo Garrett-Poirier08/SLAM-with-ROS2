@@ -1,0 +1,25 @@
+services:
+  foxglove:
+    build: .
+    image: rosdemo:latest
+    container_name: ros2_foxglove_bridge
+    restart: unless-stopped
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./ros2_ws:/ros2_ws
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               if [ -f /ros2_ws/install/setup.bash ]; then source /ros2_ws/install/setup.bash; fi &&
+               ros2 launch foxglove_bridge foxglove_bridge_launch.xml"
+
+  dev:
+    image: rosdemo:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./ros2_ws:/ros2_ws
+    working_dir: /ros2_ws
+    command: bash
+    depends_on:
+      - foxglove
