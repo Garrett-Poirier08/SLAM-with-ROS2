@@ -1,5 +1,0 @@
-[console_scripts]
-grid_mapper = my_sensor_pkg.grid_mapper:main
-lidar_sim = my_sensor_pkg.lidar_sim:main
-wave_publisher = my_sensor_pkg.wave_publisher:main
-wheel_imu_odom = my_sensor_pkg.wheel_imu_odom:main
