@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: my-sensor-pkg
+Version: 0.0.1
+Summary: Sensor and SLAM launch package
+Maintainer: garrettpoirier
+Maintainer-email: root@todo.todo
+License: Apache-2.0
