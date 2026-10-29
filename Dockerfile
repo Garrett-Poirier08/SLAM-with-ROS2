@@ -14,16 +14,26 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-jazzy-foxglove-bridge \
     ros-jazzy-tf2-ros \
     ros-jazzy-tf2-tools \
+    ros-jazzy-teleop-twist-keyboard \
+    # Foxglove & Core TF tools
+    ros-jazzy-foxglove-bridge \
+    ros-jazzy-tf2-ros \
+    ros-jazzy-tf2-tools \
+    # Robot Model (URDF / Xacro)
     ros-jazzy-robot-state-publisher \
     ros-jazzy-joint-state-publisher \
     ros-jazzy-xacro \
+    # Odometry Fusion & SLAM
     ros-jazzy-robot-localization \
     ros-jazzy-slam-toolbox \
+    # Sensor Filters
     ros-jazzy-imu-tools \
     ros-jazzy-laser-filters \
+    # Drive Base Control & Teleop
     ros-jazzy-ros2-control \
     ros-jazzy-ros2-controllers \
     ros-jazzy-teleop-twist-keyboard \
+    # Navigation & Map Saving
     ros-jazzy-navigation2 \
     ros-jazzy-nav2-bringup \
     && rm -rf /var/lib/apt/lists/*
