@@ -14,6 +14,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(tf2 REQUIRED)
@@ -26,6 +27,7 @@ add_executable(algorithm_node src/algorithm_template.cpp)
 ament_target_dependencies(algorithm_node
   rclcpp
   sensor_msgs
+  std_srvs
   nav_msgs
   geometry_msgs
   tf2
@@ -36,6 +38,14 @@ ament_target_dependencies(algorithm_node
 install(TARGETS
   algorithm_node
   DESTINATION lib/${PROJECT_NAME}
+)
+
+# 5. Install launch and config directories (optional, if present in your package)
+install(DIRECTORY
+  launch
+  config
+  DESTINATION share/${PROJECT_NAME}
+  OPTIONAL
 )
 
 ament_package()

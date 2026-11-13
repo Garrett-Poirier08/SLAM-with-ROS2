@@ -88,7 +88,7 @@ private:
     //   - latest_imu_->angular_velocity, linear_acceleration
     //   - state_x_, state_y_, state_yaw_, grid_state_
     // =========================================================================
-
+    
     // Example output message shells ready to populate and publish:
     nav_msgs::msg::OccupancyGrid map_msg;
     map_msg.header.stamp = this->get_clock()->now();
