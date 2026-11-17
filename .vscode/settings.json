@@ -1,4 +1,5 @@
 {
     "cmake.configureOnOpen": false,
-    "C_Cpp.default.configurationProvider": ""
+    "C_Cpp.default.configurationProvider": "",
+    "cmake.sourceDirectory": "/Users/garrett/SLAM with ROS2/ros2_ws/sllidar_ros2"
 }
