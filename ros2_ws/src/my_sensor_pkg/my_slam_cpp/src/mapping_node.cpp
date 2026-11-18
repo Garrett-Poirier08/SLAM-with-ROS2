@@ -35,7 +35,7 @@ private:
             // Convert polar (range, angle_rad) to local Cartesian (x, y) in laser_frame:
             float x = range * std::cos(angle_rad);
             float y = range * std::sin(angle_rad);
-            grid.addPoint(x,y);
+            
             //need to transform the points by x y speed as well as angular velocity.
         }
     }

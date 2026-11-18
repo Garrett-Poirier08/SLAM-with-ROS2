@@ -33,6 +33,22 @@ class Grid2D{
             resizeGrid(x,y);
         }
     }
+
+    /**
+     * addPoint is a function that takes in a x,y cordnate and a value, and saves the value in the specified grid cordnate
+     * @param x is an intager value and represents the x cordnate
+     * @param y is an intager value and represents the y cordnate
+     * @param value is an intager value and represents the occupancy of a given square.
+     */
+    void addPoint(int x, int y, int value){
+        int pointX = static_cast<int>((x - x_pos)/resolution);//collomn index
+        int pointY = static_cast<int>((y - y_pos)/resolution);//row index
+
+        manageGrid(pointX,pointY);
+        grid[pointX][pointY] = value;
+    }
+
+    private:
     void resizeGrid(int x, int y){
         if(x < 0){
             for(auto& rows : grid){
@@ -55,17 +71,37 @@ class Grid2D{
         }
 
     }
-    /**
-     * addPoint is a function that takes in a x,y cordnate and a value, and saves the value in the specified grid cordnate
-     * @param x is an intager value and represents the x cordnate
-     * @param y is an intager value and represents the y cordnate
-     * @param value is an intager value and represents the occupancy of a given square.
-     */
-    void addPoint(int x, int y, int value){
-        int pointX = static_cast<int>((x - x_pos)/resolution);//collomn index
-        int pointY = static_cast<int>((y - y_pos)/resolution);//row index
+    void drawLine(int x1,int x2, int y1, int y2){
+        std::vector<std::vector<int>> pixels;
 
-        manageGrid(pointX,pointY);
-        grid[pointX][pointY] = value;
+        int dy = std::abs(y2-y1);
+        int dx = std::abs(x2-x1);
+        int sx;
+        int sy;
+
+        if(x1>x2){sx = -1;}else{sx = 1;}
+        if(y1>y2){sy = -1;}else{sy = 1;}
+
+        if(sx>sy){ 
+            int p = 2* dy - dx;
+            int x = x1;
+            int y = y1;
+            while(x != x2){
+                pixels.insert(pixels.end(),{x,y});
+                if(p >=0){
+                    x += sx;
+                    p-= 2 * dx;
+                }
+                x += sx;
+                p += 2 * dy;
+            }
+        }
+        else{
+
+        }
+        
+
+
+
     }
 };
